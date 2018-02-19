@@ -1,0 +1,732 @@
+
+.home-page, .signin-page {
+    height: 100vh;
+    padding: 0 14vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #1c91b0;
+    background: url("../img/board-game.png"), -webkit-linear-gradient(left, #0d76b9, #34bba0);
+    background: url("../img/board-game.png"), -o-linear-gradient(left, #0d76b9, #34bba0);
+    background: url("../img/board-game.png"), linear-gradient(to right, #0d76b9, #34bba0);
+    background-repeat: no-repeat;
+    background-position: -20px bottom;
+    background-size: 125%;
+}
+
+    .home-page .logo-1 {
+        display: block;
+        width: 36.8vh;
+    }
+
+    .home-page .logo-3 {
+        display: none;
+    }
+
+    .text h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        font-size: 3.6vh;
+        line-height: 5.5vh;
+        text-align: center;
+        margin: 5vh 0 6vh 0;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (min-width: 500px) {
+
+        .home-page, .signin-page {
+            background: url("../img/board-game-2.png"), -webkit-linear-gradient(left, #0d76b9, #34bba0);
+            background: url("../img/board-game-2.png"), -o-linear-gradient(left, #0d76b9, #34bba0);
+            background: url("../img/board-game-2.png"), linear-gradient(to right, #0d76b9, #34bba0);
+            background-size: 110%;
+            background-position: -20px center;
+        }
+
+            .home-page .logo-1 {
+                display: none;
+            }
+
+            .home-page .logo-3 {
+                margin-top: 6vh;
+                display: block;
+                width: 80vh;
+            }
+
+
+        .text h1 {
+            width: 60vw;
+            font-size: 6vh;
+            font-weight: 200;
+            line-height: 8vh;
+            margin: 6vh 0 7vh 0;
+        }
+
+        .home-page .buttons a {
+            width: 60vw;
+            margin-top: 2vh;
+            font-size: 4.3vh;
+            line-height: 11.2vh;
+            height: 11vh;
+        }
+
+    }
+
+/*///////////////////////////////////////////////////*/
+
+.signup-page {
+    height: 100vh;
+    padding: 0 14vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #303030;        
+    background-image: url("../img/board-game-3.png");
+    background-repeat: no-repeat;
+    background-position: -20px bottom;
+    background-size: 125%;
+}
+
+    .signup-page .logo img {
+        width: 42vh;
+    }
+
+    .form form {
+        width: 70vw;
+        margin: 3vh 0 5vh 0;
+    }
+
+
+    .signup-page .form form .mdl-textfield__input {
+        border-bottom: 1px solid  #303030;
+        color: #0E77BA;
+    }
+
+    .signin-page .separate, .signup-page .separate {
+        display: flex;
+        align-items: center;
+        width: 69vw;
+        height: 8vh;
+        margin-bottom: 0.5vh;
+    }
+        .signin-page .ou, .signup-page .ou {
+            flex: 1.5;
+            font-size: 2vh;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1vh;
+        }
+
+        .signup-page .trait {
+            flex: 4;
+            height: 1px;
+            background: #303030;
+        }
+
+.logos-social-net {
+    width: 85vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .logos-social-net a.mdl-button--fab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        min-width: 50px;
+        width: 50px;
+
+    }
+
+        .logos-social-net a .facebook-pict {
+            width: 20.8%; 
+        }
+
+        .logos-social-net a .twitter-pict {
+            width: 42%; 
+        }
+
+        .logos-social-net a .google-pict {
+            width: 56%; 
+        }
+
+
+        @media (min-width: 500px) {
+
+
+    .signup-page .logo img {
+        width: 40vw;
+    }
+
+        .signup-page {
+            background-position: 0 140px;
+            background-size: 100%;
+        }
+
+
+            .signup-page .form form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 80vw;
+                margin: 1vh 0 0 0;
+            }
+
+            .signup-page .form form .mdl-textfield {
+                width: 45%;
+            }
+
+            .signup-page .buttons a {
+                width: 80vw;
+                margin-top: 2vh;
+                font-size: 4vh;
+                line-height: 10.2vh;
+                height: 10vh;
+            }
+
+        .signup-page .separate {
+            display: flex;
+            align-items: center;
+            width: 80vw;
+            height: 8vh;
+        }
+
+        .signup-page .ou {
+            flex: 0.5;
+            font-size: 4vh;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1vh;
+        }
+
+        .logos-social-net {
+            width: 40vw;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+    }
+
+
+/*///////////////////////////////////////////////////*/
+
+
+        .signin-page .logo-1 {
+            display: block;
+            width: 39vh;
+        }
+
+        .signin-page .logo-3 {
+            display: none;
+        }
+
+        .signin-page .trait {
+            flex: 4;
+            height: 1px;
+            background: #fff;
+        }
+
+        .signin-page .logos-social-net a.mdl-button--fab {
+            background-color: white;
+
+        }
+
+        .signin-page .logos-social-net a .google-pict {
+            width: 60%; 
+        }
+
+        @media (min-width: 500px) {
+
+            .signin-page .logo-1 {
+                display: none;
+            }
+
+            .signin-page .logo-3 {
+                display: block;
+                width: 40vw;
+            }
+
+            .signin-page .form form {
+                display: flex;
+                justify-content: space-between;
+                width: 80vw;
+                margin: 4vh 0 3vh 0;
+            }
+
+            .signin-page .form form .mdl-textfield {
+                width: 45%;
+            }
+
+            .signin-page .buttons a {
+                width: 80vw;
+                margin-top: 2vh;
+                font-size: 4vh;
+                line-height: 10.2vh;
+                height: 10vh;
+            }
+
+        .signin-page .separate {
+            display: flex;
+            align-items: center;
+            width: 80vw;
+            height: 8vh;
+            margin: 4vh 0 4vh 0;
+        }
+
+        .signin-page .ou {
+            flex: 0.5;
+            font-size: 4vh;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1vh;
+        }
+
+        .logos-social-net {
+            width: 40vw;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+    }
+
+/*///////////////////////////////////////////////////*/
+
+.filter-board-game-page {
+    height: 100vh;
+    padding: 0 12vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-board-game-page h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4vh;
+    text-align: center;
+    color: #0E77BA;
+}
+
+.filter-board-game-page .list-types-bg {
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.2vh 0 2.5vh 0;
+}
+
+.filter-board-game-page .list-types-bg .group {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+.filter-board-game-page .list-types-bg .group .toggle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-board-game-page .list-types-bg .toggle label {
+    width: 8%;
+}
+
+
+.group p {
+    margin-top: 0.5vh;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2vh;
+    line-height: 2.3vh;
+    padding-right: 8.2vw;
+}
+
+.filter-board-game-page .list-types-bg .toggle img {
+    margin-right: 1.5vw;
+}
+
+.plateau-pict {
+    width: 42%;        
+}
+
+
+.ambiance-pict {
+    width: 38%;        
+}
+
+.des-pict {
+    width: 36%;        
+}
+
+.filter-board-game-page .list-types-bg .toggle .classiques-pict {
+    width: 25%;
+    margin-right: 0;
+}
+
+
+.tcg-pict, .cartes-pict {
+    width: 34%;        
+}
+
+.filter-board-game-page .list-types-bg .toggle .figurines-pict {
+    width: 40%;
+    margin-right: -1vh;        
+}
+
+.roles-pict {
+    width: 36%;        
+}
+
+
+.filter-board-game-page .buttons a {
+    color: white;
+    background: #1c91b0;
+    background: -webkit-linear-gradient(to right, #0d76b9, #34bba0);
+    background: linear-gradient(to right, #0d76b9, #34bba0);
+}
+
+@media (min-width: 500px) {
+
+    .filter-board-game-page h1 {
+        font-size: 7.2vh;
+        width: 80vw;
+        margin: 0;
+    }
+
+    .filter-board-game-page .list-types-bg {
+        width: 80vw;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5vh 0 2.5vh 5vh;
+    }
+
+    .filter-board-game-page .list-types-bg .group {
+        width: 25%;
+    }
+
+    .filter-board-game-page .list-types-bg .toggle img {
+        margin-top: 1vh;
+        margin-right: 1vw;
+    }
+
+    .group p {
+        margin-top: 0.7vh;
+        font-size: 3.5vh;
+        line-height: 3.8vh;
+        padding-right: 5.3vw;
+    }
+
+    .filter-board-game-page .list-types-bg .toggle .classiques-pict {
+        margin-left: -1vw;
+    }
+
+    .filter-board-game-page .buttons a {
+        width: 80vw;
+        color: white;
+        font-size: 4vh;
+        line-height: 10.2vh;
+        height: 10vh;
+    }
+
+}
+
+/*///////////////////////////////////////////////////*/
+
+.map-page, .profil-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .map-page .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background: #1c91b0;
+    background: -webkit-linear-gradient(to right, #0d76b9, #34bba0);
+    background: linear-gradient(to right, #0d76b9, #34bba0);
+    height: 146px;
+    z-index: 1;
+    box-shadow: 0px 0px 5px #5A5A5A;
+}
+    .map-page .header .part-1 {
+        display: flex;
+        align-items: center;
+        height: 10vh;
+        padding-left: 23vw;
+    }
+
+    .map-page .header .part-1 .logo {
+        width: 48vw;
+    }
+
+    .map-page .header .part-1 .menu-point {
+        color: white;
+        margin-top: 0.8vh;
+        margin-left: 13vw;
+    }
+
+    .map-page .header .part-2 input {
+        width: 85vw;
+        height: 4.5vh;
+        margin: 0;
+    }
+
+    .map-page .header .part-3 .rayon {
+        font-size: 4vw;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        color: white;
+        margin: 1.5vh 0;
+    }
+
+    .map-page .header .part-3 .rayon span {
+        font-size: 5vw;
+        margin: 0 0.7vw;
+        font-weight: 600;
+        text-decoration : underline;
+    }
+
+.map-page .map {
+    background-color: #BCBCBC;
+    width: 100vw;
+    flex:1;
+}
+
+.map-page .map .filtres {
+    width: 94vw;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 21.5%;
+    left:0;
+    z-index: 100;
+}
+
+.map-page .map  #mapid { 
+    position: absolute;
+    top: 10%;
+    left:0;
+    z-index: 0;
+    width: 100%;
+    height: 90%;
+}
+
+
+.barre-menu {
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    background-color: #ECECEC;
+    width: 100vw;
+    height: 55px; 
+    box-shadow: 0px 0px 5px #707070;
+}
+
+
+.barre-menu a {
+    display: block;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+;}
+
+.barre-menu a .m-selected {
+    height: 5px;
+    width: 100%;
+    background-color: red;
+    background: #1c91b0;
+    background: -webkit-linear-gradient(to right, #0d76b9, #34bba0);
+    background: linear-gradient(to right, #0d76b9, #34bba0);
+}
+
+.barre-menu .separate {
+    width: 1px;
+    height: 60%;
+    background-color: #C4C4C4;
+}
+
+.barre-menu a:hover {
+    background-color: #DFDBDB;
+    height: 100%;
+}
+
+.barre-menu a img {
+    margin: 1.65vh 0 1vh 0;
+    width: 45%;
+}
+
+.barre-menu a.m-raking img {
+    width: 34%;
+}
+
+.barre-menu a.m-notif img {
+    width: 41%;
+}
+
+@media (min-width: 500px) {
+    .map-page .header {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: row;
+        height: 75px;
+    }
+
+    .map-page .header .part-1 {
+        display: none;
+    }
+
+
+    .map-page .header .part-2 {
+        width: 58%;
+        margin-left: 5%;
+    }
+
+    .map-page .header .part-2 input {
+        width: 100%;
+        height: 8vh;
+        margin: 0;
+    }
+
+    .map-page .header .part-3 {
+        width: 30%;
+        margin-left: 2.5%;
+    }
+
+    .map-page .header .part-3 .rayon {
+        text-align: right;
+        font-size: 2.5vw;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        color: white;
+        margin: 1.5vh 0;
+    }
+
+    .barre-menu a .m-selected {
+        height: 3px;
+    }
+
+    .map-page .header .part-3 .rayon span {
+        font-size: 3vw;
+        margin: 0 0.7vw;
+        font-weight: 600;
+        text-decoration : underline;
+    }
+
+    .barre-menu {
+        height: 45px; 
+    }
+
+    .barre-menu a:hover {
+        background-color: #DFDBDB;
+        height: 100%;
+    }
+
+    .barre-menu a img {
+        margin: 1.65vh 0 1vh 0;
+        width: 24%;
+    }
+
+    .barre-menu a.m-raking img {
+        width: 19%;
+    }
+
+    .barre-menu a.m-notif img {
+        width: 23%;
+    }
+
+
+
+
+}
+
+
+
+
+/*///////////////////////////////////////////////////*/
+
+
+    .profil-page .header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    background: #1c91b0;
+    background: -webkit-linear-gradient(to right, #0d76b9, #34bba0);
+    background: linear-gradient(to right, #0d76b9, #34bba0);
+    height: 65px;
+    z-index: 1;
+    box-shadow: 0px 0px 5px #5A5A5A;
+    color: white;
+}
+
+    .profil-page .header .arrow-back {
+        margin: 0 3vw;
+        width: 5.5%;
+    }
+    .profil-page .header .title {
+        font-size: 5vw;
+        margin-left: 5vw;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        flex: 3;
+    }
+
+    .profil-page .header .menu-point {
+        margin-right: 4vw;
+    }
+
+.profil-page .profil {
+    background-color: #fff;
+    width: 100vw;
+    flex:1;
+}
+
+
+    .profil-page .barre-menu a.m-profil img {
+        margin: 2vh 0 1.2vh 0;
+        width: 48%;
+    }
+
+
+@media (min-width: 500px) {
+
+    .profil-page .header .arrow-back {
+        margin: 0 2vw;
+        width: 3.7%;
+    }
+    .profil-page .header .title {
+        font-size: 3.5vw;
+    }
+
+    .profil-page .header .menu-point {
+        margin-right: 2.6vw;
+    }
+
+    .profil-page .barre-menu a.m-profil img {
+        margin: 2vh 0 1.2vh 0;
+        width: 27%;
+    }
+
+
+}

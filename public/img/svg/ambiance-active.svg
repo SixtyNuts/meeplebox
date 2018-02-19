@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="3760.877 459.251 45.17 49.649">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_183" data-name="Rectangle 183" width="45.171" height="49.649"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.001" y1="0.5" x2="1.001" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3eb59d"/>
+      <stop offset="0.759" stop-color="#1187b8"/>
+      <stop offset="1" stop-color="#0e77ba"/>
+    </linearGradient>
+  </defs>
+  <g id="Groupe_93" data-name="Groupe 93" transform="translate(3526.677 531.758)">
+    <g id="Groupe_92" data-name="Groupe 92" transform="translate(234.2 -72.507)">
+      <g id="Groupe_91" data-name="Groupe 91">
+        <g id="Groupe_90" data-name="Groupe 90" class="cls-1" transform="translate(0)">
+          <path id="Tracé_68" data-name="Tracé 68" class="cls-2" d="M261.351.455A1.381,1.381,0,0,0,260.3,0h-.035c-3.429,1.819-11.441,3.114-20.853,3.114S221.989,1.819,218.56,0h-.035a1.4,1.4,0,0,0-1.05.455,1.393,1.393,0,0,0-.385,1.085l2.554,30.16a19.834,19.834,0,0,0,39.467,0l2.554-30.16a1.165,1.165,0,0,0-.315-1.085ZM225.872,17.879c.315-1.47,2.659-2.2,5.248-1.644s4.444,2.169,4.129,3.639-2.659,2.2-5.248,1.644-4.444-2.169-4.129-3.639ZM248.3,33.974a9.3,9.3,0,0,1-17.739,0,1.252,1.252,0,0,1,.175-1.05,1.211,1.211,0,0,1,.945-.49s5.878,2.729,8.012,2.729,7.453-2.729,7.453-2.729a1.116,1.116,0,0,1,.945.49,1.137,1.137,0,0,1,.21,1.05Zm.525-12.456c-2.589.56-4.933-.175-5.248-1.644s1.539-3.079,4.129-3.639,4.933.175,5.248,1.644-1.5,3.079-4.129,3.639Zm0,0" transform="translate(-217.125)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

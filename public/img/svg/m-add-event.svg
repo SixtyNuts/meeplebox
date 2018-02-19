@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2315.534 4108.182 27.64 29.192">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f4f6;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke: #9d9d9c;
+      }
+
+      .cls-2, .cls-4 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Groupe_455" data-name="Groupe 455" transform="translate(2316.284 4108.932)">
+    <rect id="Rectangle_195" data-name="Rectangle 195" class="cls-1" width="21.729" height="22.464" transform="translate(0 1.307)"/>
+    <path id="Tracé_376" data-name="Tracé 376" class="cls-2" d="M0,0H21.729V22.464H0Z" transform="translate(0 1.307)"/>
+    <path id="Tracé_375" data-name="Tracé 375" class="cls-2" d="M0,0H21.484" transform="translate(0.245 6.29)"/>
+    <rect id="Rectangle_197" data-name="Rectangle 197" class="cls-1" width="15.521" height="11.6" transform="translate(3.186 8.986)"/>
+    <path id="Tracé_377" data-name="Tracé 377" class="cls-2" d="M0,0H15.521V11.6H0Z" transform="translate(3.186 8.986)"/>
+    <line id="Ligne_14" data-name="Ligne 14" class="cls-3" y2="10.865" transform="translate(7.025 9.312)"/>
+    <line id="Ligne_15" data-name="Ligne 15" class="cls-3" y2="10.865" transform="translate(10.946 9.312)"/>
+    <line id="Ligne_16" data-name="Ligne 16" class="cls-3" y2="10.701" transform="translate(14.704 9.476)"/>
+    <line id="Ligne_17" data-name="Ligne 17" class="cls-3" x2="15.439" transform="translate(3.186 12.907)"/>
+    <line id="Ligne_18" data-name="Ligne 18" class="cls-3" x2="15.439" transform="translate(3.186 16.746)"/>
+    <rect id="Rectangle_199" data-name="Rectangle 199" class="cls-1" width="3.022" height="3.186" transform="translate(2.614 0)"/>
+    <rect id="Rectangle_200" data-name="Rectangle 200" class="cls-4" width="3.022" height="3.186" transform="translate(2.614 0)"/>
+    <rect id="Rectangle_201" data-name="Rectangle 201" class="cls-1" width="3.022" height="3.186" transform="translate(16.011 0)"/>
+    <rect id="Rectangle_202" data-name="Rectangle 202" class="cls-4" width="3.022" height="3.186" transform="translate(16.011 0)"/>
+    <g id="Groupe_114" data-name="Groupe 114" transform="translate(11.11 12.662)">
+      <path id="Tracé_342" data-name="Tracé 342" class="cls-1" d="M29.231,23.515A7.515,7.515,0,1,1,21.715,16a7.5,7.5,0,0,1,7.515,7.515" transform="translate(-14.118 -16)"/>
+      <ellipse id="Ellipse_15" data-name="Ellipse 15" class="cls-4" cx="7.515" cy="7.515" rx="7.515" ry="7.515"/>
+    </g>
+    <path id="Tracé_343" data-name="Tracé 343" class="cls-4" d="M18.4,24.111h7.842M22.321,19.7v8.741" transform="translate(-3.778 -4.016)"/>
+  </g>
+</svg>

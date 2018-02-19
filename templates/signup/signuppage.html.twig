@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        <div class="signup-page">
+            <div class="logo">
+                <img src="img/svg/logo_meeplebox_2.svg" alt="Logo de MeepleBox">
+            </div>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+
+            <input type="submit" value="Créer"
+                   class="btn btn-default" />
+            {{ form_end(form) }}
+            </div>
+            <div class="buttons">
+                <a href="filter-board-game.html" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">S'ENREGISTRER</a>
+            </div>
+            <div class="separate">
+                <div class="trait"></div>
+                <div class="ou">
+                    ou
+                </div>
+                <div class="trait"></div>
+            </div>
+            <div class="logos-social-net">
+                <a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                    <img class="facebook-pict" src="img/svg/logo_facebook.svg" alt="Logo Facebook">
+                </a>
+                <a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                    <img class="twitter-pict" src="img/svg/logo_twitter.svg" alt="Logo Twitter">
+                </a>
+                <a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                    <img class="google-pict" src="img/svg/logo_google.svg" alt="Logo Google +">
+                </a>
+            </div>
+        </div>
+{% endblock %}

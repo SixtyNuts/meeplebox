@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1502.011 2803.513 13.679 12.206">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-6);
+      }
+    </style>
+    <linearGradient id="linear-gradient" y1="0.492" x2="1" y2="0.492" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3eb59d"/>
+      <stop offset="0.759" stop-color="#1187b8"/>
+      <stop offset="1" stop-color="#0e77ba"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="0.511" y2="0.511" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" y1="0.531" y2="0.531" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" y1="0.496" x2="0.993" y2="0.496" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" y1="0.503" x2="0.993" y2="0.503" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="0.004" y1="0.494" x2="0.996" y2="0.494" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Groupe_197" data-name="Groupe 197" transform="translate(1502.011 2803.513)">
+    <rect id="Rectangle_263" data-name="Rectangle 263" class="cls-1" width="13.679" height="1.052" transform="translate(0 1.315)"/>
+    <rect id="Rectangle_264" data-name="Rectangle 264" class="cls-2" width="13.679" height="1.052" transform="translate(0 5.577)"/>
+    <rect id="Rectangle_265" data-name="Rectangle 265" class="cls-3" width="13.679" height="1.052" transform="translate(0 9.838)"/>
+    <circle id="Ellipse_47" data-name="Ellipse 47" class="cls-4" cx="1.789" cy="1.789" r="1.789" transform="translate(1.578 0)"/>
+    <circle id="Ellipse_48" data-name="Ellipse 48" class="cls-5" cx="1.789" cy="1.789" r="1.789" transform="translate(9.417 4.314)"/>
+    <circle id="Ellipse_49" data-name="Ellipse 49" class="cls-6" cx="1.789" cy="1.789" r="1.789" transform="translate(4.525 8.628)"/>
+  </g>
+</svg>

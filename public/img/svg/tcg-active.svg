@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="3609 676.77 42 58.53">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient-6);
+      }
+    </style>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3eb59d"/>
+      <stop offset="0.759" stop-color="#1187b8"/>
+      <stop offset="1" stop-color="#0e77ba"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="0.496" x2="1.001" y2="0.496" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" y1="0.482" x2="1.001" y2="0.482" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" y1="0.496" x2="1.001" y2="0.496" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" y1="0.495" x2="1.001" y2="0.495" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" y1="0.481" x2="1.001" y2="0.481" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Groupe_105" data-name="Groupe 105" transform="translate(3609 676.77)">
+    <path id="Tracé_79" data-name="Tracé 79" class="cls-1" d="M38.94,0H3.06A3.11,3.11,0,0,0,0,3.258V55.272A3.134,3.134,0,0,0,3.06,58.53H38.94A3.086,3.086,0,0,0,42,55.272V3.258A3.11,3.11,0,0,0,38.94,0Z"/>
+    <rect id="Rectangle_185" data-name="Rectangle 185" class="cls-2" width="32.94" height="18.636" transform="translate(4.768 34.967)"/>
+    <rect id="Rectangle_186" data-name="Rectangle 186" class="cls-2" width="32.94" height="4.927" transform="translate(4.768 3.377)"/>
+    <g id="Groupe_104" data-name="Groupe 104" transform="translate(5.563 21.987)">
+      <g id="Groupe_103" data-name="Groupe 103">
+        <path id="Tracé_80" data-name="Tracé 80" class="cls-2" d="M16.265,63.506a.324.324,0,0,1,.079-.477l1.152-.755-3.417-4.689A.565.565,0,0,1,14,57.347l.119-1.629a.335.335,0,0,1,.159-.278.139.139,0,0,1,.079-.04.3.3,0,0,1,.318-.04l1.43.6a.4.4,0,0,1,.2.159l2.543,5.245L20,60.605a.312.312,0,0,1,.477.119l.238.4a.333.333,0,0,1-.119.477l-1.113.755.715,1.152a1.336,1.336,0,0,1,1.033.636,1.432,1.432,0,0,1-.4,1.947,1.291,1.291,0,0,1-1.868-.437,1.448,1.448,0,0,1-.119-1.272l-.675-1.152-1.152.755a.27.27,0,0,1-.437-.119Zm0,0" transform="translate(-14 -55.334)"/>
+      </g>
+    </g>
+    <path id="Tracé_81" data-name="Tracé 81" class="cls-2" d="M76.031,57.355a.439.439,0,0,0-.318,0L72.1,58.666a.629.629,0,0,0-.4.636c.119,5.642,2.384,7.152,4.013,8.066a.253.253,0,0,0,.238,0c1.629-.914,3.894-2.424,4.013-8.066a.708.708,0,0,0-.4-.636Zm1.073,3.7" transform="translate(-43.21 -34.547)"/>
+    <rect id="Rectangle_187" data-name="Rectangle 187" class="cls-3" width="25.43" height="0.795" transform="translate(8.821 37.907)"/>
+    <rect id="Rectangle_188" data-name="Rectangle 188" class="cls-4" width="25.43" height="0.795" transform="translate(8.821 40.728)"/>
+    <rect id="Rectangle_189" data-name="Rectangle 189" class="cls-5" width="25.43" height="0.795" transform="translate(8.821 43.868)"/>
+    <rect id="Rectangle_190" data-name="Rectangle 190" class="cls-6" width="25.43" height="0.795" transform="translate(8.821 46.45)"/>
+    <rect id="Rectangle_191" data-name="Rectangle 191" class="cls-7" width="25.43" height="0.795" transform="translate(8.821 49.272)"/>
+  </g>
+</svg>
