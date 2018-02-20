@@ -35,6 +35,7 @@ class Users
      * @ORM\Column(type="string", nullable=false)
      */
     private $email;
+ 
 
     /**
      * @return mixed

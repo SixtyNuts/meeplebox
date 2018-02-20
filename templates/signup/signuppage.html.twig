@@ -6,15 +6,34 @@
                 <img src="img/svg/logo_meeplebox_2.svg" alt="Logo de MeepleBox">
             </div>
             {{ form_start(form) }}
-            {{ form_widget(form) }}
 
-            <input type="submit" value="Créer"
-                   class="btn btn-default" />
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+                    {{ form_widget(form.pseudo,  {'attr': {'class': 'mdl-textfield__input'}}) }}
+                    {{ form_label(form.pseudo, 'Pseudo', {'label_attr': {'class': 'mdl-textfield__label'}}) }}
+                    {{ form_errors(form.pseudo, {'errors_attr': {'class': 'mdl-textfield__error'}}) }}
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+                    {{ form_widget(form.password,  {'attr': {'class': 'mdl-textfield__input'}}) }}
+                    {{ form_label(form.password, 'Mot de passe', {'label_attr': {'class': 'mdl-textfield__label'}}) }}
+                    {{ form_errors(form.password, {'errors_attr': {'class': 'mdl-textfield__error'}}) }}
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+                    {{ form_widget(form.birthday,  {'attr': {'class': 'mdl-textfield__input'}}) }}
+                    {{ form_label(form.birthday, 'Date de naissance', {'label_attr': {'class': 'mdl-textfield__label'}}) }}
+                    {{ form_errors(form.birthday, {'errors_attr': {'class': 'mdl-textfield__error'}}) }}
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+                    {{ form_widget(form.email,  {'attr': {'class': 'mdl-textfield__input'}}) }}
+                    {{ form_label(form.email, 'E-mail', {'label_attr': {'class': 'mdl-textfield__label'}}) }}
+                    {{ form_errors(form.email, {'errors_attr': {'class': 'mdl-textfield__error'}}) }}
+                </div>
+
+                <input type="submit" value="s'enregistrer" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" />
+
             {{ form_end(form) }}
-            </div>
-            <div class="buttons">
-                <a href="filter-board-game.html" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">S'ENREGISTRER</a>
-            </div>
             <div class="separate">
                 <div class="trait"></div>
                 <div class="ou">
