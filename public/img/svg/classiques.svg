@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2431 562.621 33.853 63.579">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #c8c7c7;
-      }
-    </style>
-  </defs>
-  <g id="Groupe_108" data-name="Groupe 108" transform="translate(2430.9 562.621)">
-    <g id="Groupe_108-2" data-name="Groupe 108" transform="translate(0.1)">
-      <path id="Tracé_87" data-name="Tracé 87" class="cls-1" d="M32.286,52.585a7.372,7.372,0,0,0-.357-8.334C28.6,39.806,23.952,26.67,27.048,17.7h3.016V0H26.452V3.612H22.841V0H18.793V3.612H15.181V0h-3.85V3.612H7.72V0H3.91V17.7H7.085C10.181,26.67,5.5,39.806,2.2,44.251a7.477,7.477,0,0,0-.437,8.374A1.76,1.76,0,0,0,.1,54.292v3.85a1.909,1.909,0,0,0,1.865,1.826h.159v3.612H31.889V59.967h.317a1.8,1.8,0,0,0,1.746-1.826v-3.85a1.864,1.864,0,0,0-1.667-1.707Zm0,0" transform="translate(-0.1)"/>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.3 841.9" enable-background="new 0 0 595.3 841.9" xml:space="preserve">
+<g id="Groupe_108" transform="translate(2430.9 562.621)">
+	<g id="Groupe_108-2" transform="translate(0.1)">
+		<path id="Tracé_87" fill="#C7C7C7" d="M-1931.3,133.7c21.4-34.2,19.5-78.1-4.7-110.4c-44.1-58.9-105.6-232.8-64.6-351.6h39.9
+			v-234.4h-47.8v47.8h-47.8v-47.8h-53.6v47.8h-47.8v-47.8h-51v47.8h-47.8v-47.8h-50.5v234.4h42c41,118.8-21,292.7-64.7,351.6
+			c-24.4,32.3-26.7,76.2-5.8,110.9c-11.9,0.6-21.4,10.2-22,22.1v51c0.6,13.3,11.4,23.9,24.7,24.2h2.1v47.8h394.1v-47.8h4.2
+			c13-0.4,23.3-11.2,23.1-24.2v-51C-1910.2,144.4-1919.5,134.9-1931.3,133.7L-1931.3,133.7z"/>
+	</g>
+</g>
 </svg>

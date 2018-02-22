@@ -1,30 +1,23 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div class="signup-page">
+    <div class="signin-page">
         <div class="logo">
-            <img src="img/svg/logo_meeplebox_2.svg" alt="Logo de MeepleBox">
+            <img class="logo-1" src="img/svg/logo_meeplebox_1.svg" alt="Logo de MeepleBox">
+            <img class="logo-3" src="img/svg/logo_meeplebox_3.svg" alt="Logo de MeepleBox allongé">
         </div>
         {{ form_start(form) }}
             <div class="input-field">
                 {{ form_widget(form.pseudo) }}
                 {{ form_label(form.pseudo, 'Pseudo') }}
-                {{ form_errors(form.pseudo) }}
+                {{ message_account|raw }}
             </div>
             <div class="input-field">
                 {{ form_widget(form.password) }}
                 {{ form_label(form.password, 'Mot de passe') }}
-            </div>
-            <div class="input-field">
-                {{ form_widget(form.birthday,  {'attr': {'class': 'datepicker'}}) }}
-                {{ form_label(form.birthday, 'Date de naissance') }}
-            </div>
-            <div class="input-field">
-                {{ form_widget(form.email) }}
-                {{ form_label(form.email, 'E-mail') }}
-                {{ form_errors(form.email) }}
+                {{ message_password|raw }}
             </div>
             <div class="buttons">
-                <button type="submit" class="waves-effect waves-light btn btn-coul-2">s'enregistrer</button>
+                <button type="submit" class="waves-effect waves-light btn btn-coul-1">se connecter</button>
             </div>
         {{ form_end(form) }}
         <div class="separate">
@@ -35,18 +28,15 @@
             <div class="trait"></div>
         </div>
         <div class="logos-social-net">
-            <a href="#" class="btn-floating btn-large waves-effect waves-light btn-coul-2">
+            <a href="#" class="btn-floating btn-large waves-effect waves-light btn-coul-1">
                 <img class="facebook-pict" src="img/svg/logo_facebook.svg" alt="Logo Facebook">
             </a>
-            <a href="#" class="btn-floating btn-large waves-effect waves-light btn-coul-2">
+            <a href="#" class="btn-floating btn-large waves-effect waves-light btn-coul-1">
                 <img class="twitter-pict" src="img/svg/logo_twitter.svg" alt="Logo Twitter">
             </a>
-            <a href="#" class="btn-floating btn-large waves-effect waves-light btn-coul-2">
+            <a href="#" class="btn-floating btn-large waves-effect waves-light btn-coul-1">
                 <img class="google-pict" src="img/svg/logo_google.svg" alt="Logo Google +">
             </a>
         </div>
     </div>
-{% endblock %}
-{% block javascripts %}
-    <script src="js/datepicker.js"></script>
 {% endblock %}

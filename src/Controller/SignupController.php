@@ -27,17 +27,19 @@ class SignupController extends Controller
 
         $form->handleRequest($request);
 
+        $password = $form->getData()->getPassword();
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        $form->getData()->setPassword($passwordHash); 
+
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
             $entityManager->persist($user);
             $entityManager->flush();
-
+            
             $session->set('Pseudo', $form->getData()->getPseudo());
 
-            var_dump($session->get('Pseudo'));
-
             return $this->redirect($this->generateUrl(
-                'filter-board-game'
+                'filterbg'
             ));
 
         }

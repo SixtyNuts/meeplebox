@@ -2,10 +2,22 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UsersRepository")
+ * @UniqueEntity(
+ *     fields={"email"},
+ *     message="E-mail déjà enregistré"
+ * )
+  * @UniqueEntity(
+ *     fields={"pseudo"},
+ *     message="Pseudo déjà utilisé"
+ * )
+
  */
 class Users
 {
@@ -18,24 +30,40 @@ class Users
 
     /**
      * @ORM\Column(type="string", nullable=false)
+     * @Assert\NotBlank()
      */
     private $pseudo;
 
     /**
      * @ORM\Column(type="string", nullable=false)
+     * @Assert\NotBlank()
      */
     private $password;
 
     /**
-     * @ORM\Column(type="date", nullable=false)
+     * @ORM\Column(type="string", nullable=false)
      */
     private $birthday;
 
   	/**
-     * @ORM\Column(type="string", nullable=false)
+     * @ORM\Column(type="string", nullable=false, unique=true)
+     * @Assert\NotBlank()
      */
     private $email;
- 
+    
+    /**
+     * @ORM\ManyToMany(targetEntity="GameTypes", cascade={"persist"})
+     * @ORM\JoinTable(name="games_pref")
+     */
+    private $gamesPref;
+
+
+    public function __construct()
+    {
+        $this->gamesPref = new ArrayCollection();
+    }   
+
+
 
     /**
      * @return mixed
@@ -44,6 +72,25 @@ class Users
     {
         return $this->id;
     }
+    
+
+  public function addGamePref(GameTypes $gamePref)
+  {
+    $this->gamesPref[] = $gamePref;
+
+    return $this;
+  }
+
+  public function removeGamePref(GameTypes $gamePref)
+  {
+    $this->gamesPref->removeElement($gamePref);
+  }
+
+  public function getGamesPref()
+  {
+    return $this->gamesPref;
+  }
+
 
 
     /**
@@ -101,7 +148,8 @@ class Users
      */
     public function setBirthday($birthday)
     {
-        $this->birthday = $birthday;
+
+        $this->birthday = date('Y-m-d', strtotime($birthday));
 
         return $this;
     }

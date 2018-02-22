@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="filter-board-game-page">
+        <div class="title"><h1>Choisissez vos types de jeux préférés</h1></div>
+        <div class="list-types-bg">
+            <form action="#" method="post">
+                {% for id, list_game_type in list_game_types %}
+                    <div class="group">
+                        <div class="toggle">
+                            <img id="{{ list_game_type.typeCode }}" src="img/svg/{{ list_game_type.typeCode }}.svg">
+                            <div class="switch">
+                                <label>
+                                    <input type="checkbox" name="{{ list_game_type.id }}">
+                                    <span class="lever"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <p>{{ list_game_type.typeText }}</p>
+                    </div>
+                {% endfor %}
+                <div class="buttons">
+                    <button type="submit" class="waves-effect waves-light btn btn-coul-3">Valider vos choix</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="js/script.js"></script>
+{% endblock %}
