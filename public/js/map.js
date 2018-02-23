@@ -22,8 +22,6 @@
     });
 
 
-    console.log(dataMarlers)
-
     // L.marker([45.77, 4.83]).addTo(mymap)
     //     .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 

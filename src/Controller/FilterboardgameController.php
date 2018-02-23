@@ -24,33 +24,41 @@ class FilterboardgameController extends Controller
     public function filterAction(Request $request, FormFactoryInterface $formFactory, EntityManagerInterface $entityManager, SessionInterface $session)
     {
 
-        if ($session->get('Pseudo') != null) {
+        if ($session->get('id') != null) {
 
             $listGameTypes = $entityManager->getRepository(GameTypes::class)->findAll();
+            
+            if (!empty($request->request->all())) {
 
-            $user = $entityManager->getRepository(Users::class)->findOneByPseudo($session->get('Pseudo'));
+                $user = $entityManager->getRepository(Users::class)->findOneById($session->get('id'));
 
-            $requestGamesPref = $request->request->all();
+                $requestGamesPref = $request->request->all();
 
-            $listGamesPref = []; 
+                $listGamesPref = []; 
 
-            foreach ($requestGamesPref as $key => $value) {
-                $listGamesPref[] = $entityManager->getRepository(GameTypes::class)->findOneById($key);
+                foreach ($requestGamesPref as $key => $value) {
+                    $listGamesPref[] = $entityManager->getRepository(GameTypes::class)->findOneById($key);
+                }
+
+                foreach ($listGamesPref as $gamePref) {
+                    $user->addGamePref($gamePref);
+                }
+
+                $entityManager->flush();
+
+                return $this->redirect($this->generateUrl(
+                    'map'
+                ));
+
             }
-
-            foreach ($listGamesPref as $gamePref) {
-                $user->addGamePref($gamePref);
-            }
-
-            $entityManager->flush();
 
             return $this->render(
                 'filterbg/filterbgpage.html.twig', array('list_game_types' => $listGameTypes)
             );
+
         }
 
         else {
-
             return $this->redirect($this->generateUrl('index'));
         }
 

@@ -23,6 +23,7 @@ class SignupController extends Controller
 
     public function signupAction(Request $request, FormFactoryInterface $formFactory, EntityManagerInterface $entityManager, SessionInterface $session)
     {
+        
         $form = $formFactory->create(SignupType::class, new Users());
 
         $form->handleRequest($request);
@@ -36,7 +37,7 @@ class SignupController extends Controller
             $entityManager->persist($user);
             $entityManager->flush();
             
-            $session->set('Pseudo', $form->getData()->getPseudo());
+            $session->set('id', $form->getData()->getId());
 
             return $this->redirect($this->generateUrl(
                 'filterbg'

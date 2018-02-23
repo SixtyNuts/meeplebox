@@ -60,6 +60,16 @@ class Events
     private $city;
 
     /**
+     * @ORM\Column(type="decimal")
+     */
+    private $latitude;
+
+    /**
+     * @ORM\Column(type="decimal")
+     */
+    private $longitude ;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Users")
      */
     private $userCreator;
@@ -253,6 +263,46 @@ class Events
     public function setGame($game)
     {
         $this->game = $game;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * @param mixed $latitude
+     *
+     * @return self
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+
+    /**
+     * @param mixed $longitude
+     *
+     * @return self
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
 
         return $this;
     }
