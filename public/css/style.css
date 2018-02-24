@@ -679,14 +679,14 @@
     background: -webkit-linear-gradient(to right, #0d76b9, #34bba0);
     background: linear-gradient(to right, #0d76b9, #34bba0);
     height: 146px;
-    z-index: 1;
+    z-index: 110;
     box-shadow: 0px 0px 5px #5A5A5A;
 }
     .map-page .header .part-1 {
         display: flex;
         align-items: center;
         height: 10vh;
-        padding-left: 23vw;
+        padding-left: 19vw;
     }
 
     .map-page .header .part-1 .logo {
@@ -696,14 +696,19 @@
     .map-page .header .part-1 .menu-point {
         color: white;
         margin-top: 0.8vh;
-        margin-left: 13vw;
+        margin-left: 16vw;
     }
 
     .map-page .header .part-2 input {
+        font-size: 1.5rem;
+        text-align: center;
         width: 85vw;
         height: 4.5vh;
         margin: 0;
+        border-radius: 5px;
+        border: none;
     }
+
 
     .map-page .header .part-3 .rayon {
         font-size: 4vw;
@@ -721,29 +726,138 @@
     }
 
 .map-page .map {
-    background-color: #BCBCBC;
+    background-color: #fff;
     width: 100vw;
     flex:1;
 }
 
 .map-page .map .filtres {
-    width: 94vw;
-    padding: 3%;
+    width: 100%;
+    padding: 2%;
     display: flex;
     justify-content: center;
+    align-content: start;
     flex-wrap: wrap;
-    position: absolute;
-    top: 21.5%;
-    left:0;
+    position: relative;
+    top: 0;
+    left: 0;
     z-index: 100;
 }
+
+.map-page .map .filtres .chip {
+    font-size: 0.8rem;
+    margin-bottom: 0.35rem;
+    height: 22px;
+    line-height: 21px;
+    background-color: #2DAEA5;
+    color: white;
+    font-size: 500;
+    box-shadow: 0px 1px 5px #707070;
+}
+
+.map-page .map .filtres .chip .close {
+    height: 22px;
+    line-height: 22px;
+    font-size: 1rem;
+}
+
+
+.map-page .map .loading {
+    width: 37%;
+    height: 30%;
+    position: absolute;
+    top: 47%;
+    left: 31.5%;
+    z-index: 150;
+    background-image: url('../img/loading.gif');
+    background-repeat: no-repeat;
+}
+
+.map-page .popupevent {
+    display: flex;
+    width: 100%;
+    height: 17%;
+    position: relative;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 0px 0px 5px #707070;
+}
+
+.map-page .pop-no-active {
+    bottom: -17%;
+}
+
+.map-page .pop-active {
+    bottom: 0;
+    transition: bottom .3s ease-in-out .2s;
+}
+
+
+.map-page .popupevent .pict-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+}
+
+
+.map-page .popupevent .text-event {
+    width: 65%;
+}
+
+.map-page .popupevent .text-event h2 {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: bold;
+    margin: 0;
+    height: 23px;
+}
+
+.map-page .popupevent .text-event .cadre-deb img {
+    width: 35%;
+    margin-top: 8px;
+}
+
+.map-page .popupevent .text-event .event-date-time img {
+    width: 6%;
+    margin-top: -3px;
+    margin-right: 0.4rem;
+}
+
+
+.map-page .popupevent .text-event .event-city img {
+    width: 5%;
+    margin-top: -5px;
+    margin-left: 0.1rem;
+    margin-right: 0.5rem;
+}
+.map-page .popupevent .text-event .event-city {
+    line-height: 23px;
+}
+
+
+.map-page .popupevent .text-event .event-member img {
+    width: 6%;
+    margin-top: -3px;
+    margin-right: 0.3rem;
+}
+.map-page .popupevent .text-event .event-member {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1381B5;
+    line-height: 15px;
+}
+
+
 
 .map-page .map  #mapid { 
     position: absolute;
     top: 10%;
     left:0;
     z-index: 0;
-    width: 100%;
+    width: 103%;
     height: 90%;
 }
 
@@ -802,6 +916,18 @@
 }
 
 @media (min-width: 500px) {
+
+
+.map-page .popupevent {
+    width: 375px;
+    height: 108px;
+}
+
+.map-page .pop-no-active {
+    bottom: -30%;
+}
+
+
     .map-page .header {
         display: flex;
         flex-wrap: wrap;

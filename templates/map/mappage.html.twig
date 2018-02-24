@@ -21,7 +21,7 @@
                             class="mdl-button mdl-js-button mdl-button--icon">
                       <i class="material-icons">more_vert</i>
                     </button>
-                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect .menu"
                         for="demo-menu-lower-right">
                       <li class="mdl-menu__item">Aide</li>
                       <li class="mdl-menu__item">A propos de l’app</li>
@@ -31,7 +31,7 @@
                 </div>
             </div>    
             <div class="part-2">
-                <input type="texte" name="city">
+                <input type="texte" placeholder="Lyon" name="city">
             </div>    
             <div class="part-3">
                 <div class="rayon">dans un rayon de <span>20</span> km</div>
@@ -39,15 +39,25 @@
         </div>
         <div class="map">
             <div class="filtres">
-              <div class="chip">
-                Jeux de plateau
-                <i class="close material-icons">close</i>
-              </div>
+            </div>
+            <div class="loading">
             </div>
             <div id="mapid">
 
             </div>
         </div>
+        <div id="popupevent" class="popupevent pop-no-active">
+            <div class="pict-game">
+                <img class="pict-game-img" src="img/game_pict/blood-rage-vf.jpg"> 
+            </div>
+            <div class="text-event">
+                <div class="cadre-deb"><img src="img/svg/popupevent-cadre-deb.svg"></div>
+                <h2>Titre du jeu</h2>
+                <div class="event-date-time"><img src="img/svg/popupevent-icon-mini-calendrier.svg"><span>Date et heure</span></div>
+                <div class="event-city"><img src="img/svg/popupevent-icon-localisation.svg"><span>Ville</span></div>
+                <div class="event-member"><img src="img/svg/popupevent-icon-membre.svg"><span>Membre</span></div>
+            </div>
+            </div>
         <div class="barre-menu">
             <a href="#" class="m-map"><img src="img/svg/m-map-active.svg"><div class="m-selected"></div></a>
             <div class="separate"></div>
@@ -64,7 +74,6 @@
     </div>
 {% endblock %}
 {% block javascripts %}
-    <script src="js/scriptAjax.js"></script>
     <script src="js/map.js"></script>
     <script src="js/material.min.js"></script>
 {% endblock %}

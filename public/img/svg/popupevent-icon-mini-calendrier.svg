@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4564.295 2363.319 11.072 12.099">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #575756;
+        stroke-miterlimit: 10;
+        stroke-width: 0.8px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #f2f4f6;
+      }
+    </style>
+  </defs>
+  <g id="Groupe_430" data-name="Groupe 430" transform="translate(4545 2327)">
+    <rect id="Rectangle_322" data-name="Rectangle 322" class="cls-1" width="10.272" height="10.683" transform="translate(19.695 37.335)"/>
+    <line id="Ligne_51" data-name="Ligne 51" class="cls-1" x2="10.066" transform="translate(19.9 39.801)"/>
+    <rect id="Rectangle_323" data-name="Rectangle 323" class="cls-1" width="7.396" height="5.547" transform="translate(21.133 41.033)"/>
+    <line id="Ligne_52" data-name="Ligne 52" class="cls-1" y2="5.136" transform="translate(22.982 41.239)"/>
+    <line id="Ligne_53" data-name="Ligne 53" class="cls-1" y2="5.136" transform="translate(24.831 41.239)"/>
+    <line id="Ligne_54" data-name="Ligne 54" class="cls-1" y2="5.136" transform="translate(26.68 41.239)"/>
+    <line id="Ligne_55" data-name="Ligne 55" class="cls-1" x2="7.396" transform="translate(21.133 42.882)"/>
+    <line id="Ligne_56" data-name="Ligne 56" class="cls-1" x2="7.396" transform="translate(21.133 44.731)"/>
+    <rect id="Rectangle_324" data-name="Rectangle 324" class="cls-2" width="1.438" height="1.438" transform="translate(20.927 36.719)"/>
+    <rect id="Rectangle_325" data-name="Rectangle 325" class="cls-3" width="1.438" height="1.438" transform="translate(27.296 36.719)"/>
+    <rect id="Rectangle_326" data-name="Rectangle 326" class="cls-1" width="1.438" height="1.438" transform="translate(27.296 36.719)"/>
+  </g>
+</svg>

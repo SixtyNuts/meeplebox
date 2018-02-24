@@ -23,14 +23,13 @@ class MapController extends Controller
      * @Method({"GET", "POST"})
      */
 
-    public function showEventAction(Request $request, FormFactoryInterface $formFactory, EntityManagerInterface $entityManager, SessionInterface $session)
-    {
+    public function showMapAction(Request $request, FormFactoryInterface $formFactory, EntityManagerInterface $entityManager, SessionInterface $session)
+    {      
 
         if ($session->get('id') != null) {
 
             return $this->render(
                 'map/mappage.html.twig'
-                // , array('events_filt_for_user' => $eventsFilteredForUser)
             );
         }
 
@@ -45,51 +44,100 @@ class MapController extends Controller
      * @Route("/map/filtered", name="map_filtered")
      */
 
-    public function filteredTypeGameUserAction(Request $request, FormFactoryInterface $formFactory, EntityManagerInterface $entityManager, SessionInterface $session)
+    public function showMapWhithFilteredTypesPrefUserAction(Request $request, FormFactoryInterface $formFactory, EntityManagerInterface $entityManager, SessionInterface $session)
     {
+            
+            if ($session->get('id') != null) {
 
-            $events = $entityManager->getRepository(Events::class)->findAll();
-            $user = $entityManager->getRepository(Users::class)->findOneById($session->get('id'));
-            $userTypeGamePrefArray = $user->getGamesPref();
-
-            $listTypeGameForEachEvent = []; 
-            foreach ($events as $event) {
-                $listTypeGameForEachEvent[$event->getId()] = $event->getGame()->getid();
-            }
-
-            $userGamePrefId = [];
-            foreach ($userTypeGamePrefArray as $userTypeGamePref) {
-                $userGamePrefId[] = $userTypeGamePref->getId();
-            }
-
-            $eventsFilteredForUser = [];
-            foreach ($listTypeGameForEachEvent as $eventId => $TypeGame) {
-                if (in_array($TypeGame, $userGamePrefId)) {
-                   $eventsFilteredForUser[] = $entityManager->getRepository(Events::class)->findOneById($eventId);
+                $events = $entityManager->getRepository(Events::class)->findAll();
+                $user = $entityManager->getRepository(Users::class)->findOneById($session->get('id'));
+                $userTypesGamePref = $user->getGamesPref();
+                
+                // Tableau des id des Types de jeux préférés de l'utilisateur
+                $userGamePrefId = [];
+                foreach ($userTypesGamePref as $userTypeGamePref) {
+                    $userGamePrefId[] = $userTypeGamePref->getId();
                 }
-            }
 
-            $eventsArray = [];
-            foreach ($eventsFilteredForUser as $event) {
-                $eventArray = [
-                    'id' => $event->GetId(),
-                    'title' => $event->GetTitle(),
-                    'description' => $event->GetDescription(),
-                    'date' => $event->GetDate(),
-                    'startTime' => $event->GetStartTime(),
-                    'duration' => $event->GetDuration(),
-                    'address' => $event->GetAddress(),
-                    'city' => $event->GetCity(),
-                    'latitude' => $event->GetLatitude(),
-                    'longitude' => $event->GetLongitude()
-                ];
-                $eventsArray[] = $eventArray;
-            }
+                // Tableau des Events qui ont un type de jeu préféré de l'User
+                $eventsFilteredForUser = []; 
+                foreach ($events as $event) {
+                    if (in_array($event->getGame()->getGameType()->getId(), $userGamePrefId)) {
+                        $eventsFilteredForUser[] = $event;
+                    }
+                }
 
-            $jsonResponse = new JsonResponse();
-            return $jsonResponse->setData($eventsArray);
+                $eventsArray = [];
+                foreach ($eventsFilteredForUser as $event) {
+                    $eventArray = [
+                        'id' => $event->getId(),
+                        'title' => $event->getTitle(),
+                        'description' => $event->getDescription(),
+                        'date' => $event->getDate(),
+                        'startTime' => $event->getStartTime(),
+                        'duration' => $event->getDuration(),
+                        'address' => $event->getAddress(),
+                        'city' => $event->getCity(),
+                        'latitude' => $event->getLatitude(),
+                        'longitude' => $event->getLongitude(),
+                        'pseudo_creat' => $event->getUserCreator()->getPseudo(),
+                        'pict_game' => $event->getGame()->getPict(),
+                        'type_game' => $event->getGame()->getGameType()->getId()
+                    ];
+                    $eventsArray[] = $eventArray;
+                }
+
+                // Tableau des Nom des Types de jeux préférés de l'utilisateur pour générer les filtres
+                $userGamePrefForFilters = [];
+                foreach ($userTypesGamePref as $userTypeGamePref) {
+                    $userGamePrefForFilters[] = ['id' => $userTypeGamePref->getId(), 'type' => $userTypeGamePref->getTypeText()];
+                }
+
+                $jsonResponse = new JsonResponse();
+                return $jsonResponse->setData(['events' => $eventsArray, 'filters' => $userGamePrefForFilters]);
+
+            }
             
     }
+
+    /**
+     * @Route("/map/allevents", name="map_allevents")
+     */
+
+    public function showMapWhithAllEventAction(Request $request, FormFactoryInterface $formFactory, EntityManagerInterface $entityManager, SessionInterface $session)
+    {
+            
+            if ($session->get('id') != null) {
+
+                $events = $entityManager->getRepository(Events::class)->findAll();
+                
+                $eventsArray = [];
+                foreach ($events as $event) {
+                    $eventArray = [
+                        'id' => $event->getId(),
+                        'title' => $event->getTitle(),
+                        'description' => $event->getDescription(),
+                        'date' => $event->getDate(),
+                        'startTime' => $event->getStartTime(),
+                        'duration' => $event->getDuration(),
+                        'address' => $event->getAddress(),
+                        'city' => $event->getCity(),
+                        'latitude' => $event->getLatitude(),
+                        'longitude' => $event->getLongitude(),
+                        'pseudo_creat' => $event->getUserCreator()->getPseudo(),
+                        'pict_game' => $event->getGame()->getPict(),
+                        'type_game' => $event->getGame()->getGameType()->getId()
+                    ];
+                    $eventsArray[] = $eventArray;
+                }
+
+                $jsonResponse = new JsonResponse();
+                return $jsonResponse->setData(['events' => $eventsArray]);
+
+            }
+            
+    }
+
 
 
 
