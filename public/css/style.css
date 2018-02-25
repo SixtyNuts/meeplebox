@@ -1,3 +1,27 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/montserrat/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/montserrat/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-ExtraLight.woff2') format('woff2'),
+        url('../fonts/montserrat/Montserrat-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
 
 .buttons .btn-coul-1, .logos-social-net .btn-coul-1{
     color: #0D8D81;
@@ -515,6 +539,7 @@
 .filter-board-game-page h1 {
     margin-bottom: 1vh;
     font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
     font-size: 4vh;
     text-align: center;
     color: #0E77BA;
@@ -555,7 +580,7 @@
     margin-bottom: 4vh;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 2vh;
     line-height: 2.3vh;
     padding-right: 9vw;
@@ -742,6 +767,65 @@
     top: 0;
     left: 0;
     z-index: 100;
+}
+
+.map-page .map .filtres .fixed-action-btn {
+    margin-bottom: 62px;
+    height: 78px;
+}
+
+.map-page .map .filtres .fixed-action-btn a {
+    background-color: #2DAEA5;
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 0.8rem;
+    box-shadow: 0px 3px 5px #707070;
+}
+
+.map-page .map .filtres .fixed-action-btn ul li {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.map-page .map .filtres .fixed-action-btn ul li a {
+    padding: 0;
+    background-color: white;
+    border: 2px solid #2DAEA5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-page .map .filtres .fixed-action-btn ul li a img {
+    height: 80% ;
+
+}
+
+.map-page .map .filtres .fixed-action-btn ul li a img.plateau {
+    height: 87% ;
+}
+
+.map-page .map .filtres .fixed-action-btn ul li a img.ambiance {
+    height: 80% ;
+    margin-top: 4px;
+}
+
+.map-page .map .filtres .fixed-action-btn ul li a img.classiques {
+    height: 72% ;
+}
+
+
+.map-page .map .filtres .fixed-action-btn ul li a img.tcg {
+    height: 72% ;
+}
+
+.map-page .map .filtres .fixed-action-btn ul li a img.figurines {
+    height: 83% ;
+}
+
+.map-page .map .filtres .fixed-action-btn ul li a img.cartes {
+    height: 72% ;
 }
 
 .map-page .map .filtres .chip {
