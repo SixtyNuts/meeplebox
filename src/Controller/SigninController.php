@@ -23,6 +23,11 @@ class SigninController extends Controller
 
     public function signinAction(Request $request, FormFactoryInterface $formFactory, EntityManagerInterface $entityManager, SessionInterface $session)
     {
+
+        if ($session->get('id') != null) {
+            return $this->redirect($this->generateUrl('map'));
+        }
+
         $form = $formFactory->create(SigninType::class, new Users());
 
         $form->handleRequest($request);
@@ -33,13 +38,13 @@ class SigninController extends Controller
         $messageAccount = "";
         $messagePassword = "";
 
-        if ($pseudo && $password != null) {
+        if (isset($pseudo) && isset($password)) {
             $user = $entityManager->getRepository(Users::class)->findOneByPseudo($pseudo);
-            if ($user != null) {
+            if (isset($user)) {
                 $passwordDB = $user->getPassword();
                 $verifPassword = password_verify($password, $passwordDB);
                 if ($verifPassword) {
-                    $session->set('Pseudo', $pseudo);
+                    $session->set('id', $user->getId());
                     return $this->redirect($this->generateUrl('map'));
                 }
                 else {

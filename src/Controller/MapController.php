@@ -48,7 +48,7 @@ class MapController extends Controller
     public function showMapWhithFilteredTypesPrefUserAction(EntityManagerInterface $entityManager, SessionInterface $session)
     {
             
-            if ($session->get('id') != null) {
+        if ($session->get('id') != null) {
 
                 $events = $entityManager->getRepository(Events::class)->findAll();
                 $user = $entityManager->getRepository(Users::class)->findOneById($session->get('id'));
@@ -117,7 +117,7 @@ class MapController extends Controller
     public function showMapWhithAllEventAction(EntityManagerInterface $entityManager, SessionInterface $session)
     {
             
-            if ($session->get('id') != null) {
+        if ($session->get('id') != null) {
 
                 $events = $entityManager->getRepository(Events::class)->findAll();
                 
@@ -156,7 +156,7 @@ class MapController extends Controller
     public function addFilteredAction($id, EntityManagerInterface $entityManager, SessionInterface $session)
     {
             
-            if ($session->get('id') != null) {
+        if ($session->get('id') != null) {
 
                 $events = $entityManager->getRepository(Events::class)->findAll();
                 
@@ -193,6 +193,20 @@ class MapController extends Controller
             }
             
     }
+
+    /**
+     * @Route("/map/deco", name="deco")
+     */
+
+    public function deco(SessionInterface $session)
+    {      
+
+        $session->clear();
+
+        return $this->redirect($this->generateUrl('index'));
+        
+    }
+
 
 
 }

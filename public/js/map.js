@@ -75,6 +75,7 @@ function onIconCloseClick(filter, event) {
 
             beforeSend: function(){
                 divLoading.className = "loading visible";
+                mymap.setView([45.767, 4.84], 13);
             },
 
             success : function(response){
@@ -97,6 +98,8 @@ function onIconCloseClick(filter, event) {
 /////////////////////////////////////////////////////////
 
 function onAddFilterClick(e, filter, event) {
+
+    mymap.setView([45.767, 4.84], 13);
 
     $.ajax({
 
@@ -221,7 +224,7 @@ function onMapClick() {
 /////////////////////////////////////////////////////////
 
 
-let mymap = L.map('mapid').setView([45.77, 4.846], 13);
+let mymap = L.map('mapid').setView([45.767, 4.84], 13);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,

@@ -22,8 +22,8 @@ class FilterboardgameController extends Controller
      */
 
     public function filterAction(Request $request, FormFactoryInterface $formFactory, EntityManagerInterface $entityManager, SessionInterface $session)
-    {
-
+    {   
+        
         if ($session->get('id') != null) {
 
             $listGameTypes = $entityManager->getRepository(GameTypes::class)->findAll();
