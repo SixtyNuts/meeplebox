@@ -54,6 +54,15 @@
     color:#f03131;
 }
 
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+
 .signin-page .input-field li {
     color: white;
 }
@@ -863,7 +872,7 @@
     height: 17%;
     position: relative;
     left: 0;
-    z-index: 2;
+    z-index: 101;
     background-color: white;
     box-shadow: 0px 0px 5px #707070;
 }
@@ -947,7 +956,7 @@
 
 
 .barre-menu {
-    z-index: 50;
+    z-index: 102;
     display: flex;
     align-items: center;
     background-color: #ECECEC;
@@ -1029,6 +1038,32 @@
         width: 58%;
         margin-left: 5%;
     }
+
+.map-page .map .filtres .fixed-action-btn {
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+
+.map-page .map .filtres .fixed-action-btn ul {
+    margin-left: -15px;
+    width: 88px;
+    height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+.map-page .map .filtres .fixed-action-btn ul li {
+    height: 40px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+
+}
+
 
     .map-page .header .part-2 input {
         width: 100%;

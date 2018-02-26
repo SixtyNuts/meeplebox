@@ -45,16 +45,26 @@ function onIconCloseClick(filter, event) {
         clickedMarker.setIcon(meepleIcon);
     }
 
+    let markersRest = []
+
     markers.forEach(function(element) {
-      if (element.typeId == filter.id) {
-        mymap.removeLayer(element.marker);
-        // markers.splice(markers.indexOf(element), 1);
-      }  
+        if (element.typeId == filter.id) {
+            mymap.removeLayer(element.marker);
+        } else {
+            var eventRest = {};
+            eventRest["typeId"] = element.typeId;
+            eventRest["marker"] = element.marker;
+            markersRest.push(eventRest);
+        }
     });
 
-    addButtonAddFilter(filter, event);
+    markers.length=0;
 
-    let divChipFilters = document.querySelectorAll(".chip");
+    markers = markersRest;
+
+    addButtonAddFilter(filter, event);
+    
+    divChipFilters = document.querySelectorAll(".chip");
 
     if (divChipFilters.length == 1) {
 
@@ -63,6 +73,10 @@ function onIconCloseClick(filter, event) {
             url : "http://localhost:8000/map/allevents",
             type : "get",
 
+            beforeSend: function(){
+                divLoading.className = "loading visible";
+            },
+
             success : function(response){
 
                 response.events.forEach(function(event){
@@ -70,6 +84,8 @@ function onIconCloseClick(filter, event) {
                     addMarker(event);
 
                 });
+                
+                divLoading.className = "loading invisible";
 
             }
 
@@ -87,6 +103,11 @@ function onAddFilterClick(e, filter, event) {
         url : "http://localhost:8000/map/filtered/" + filter.id,
         type : "get",
 
+        beforeSend: function(){
+            divLoading.className = "loading visible";
+        },
+
+
         success : function(response){
 
             response.events.forEach(function(event){
@@ -95,9 +116,20 @@ function onAddFilterClick(e, filter, event) {
 
             });
 
+            divLoading.className = "loading invisible";
+
         }
 
     });
+
+    divChipFilters = document.querySelectorAll(".chip");
+
+    if (divChipFilters.length == 0) {
+        markers.forEach(function(element) {
+            mymap.removeLayer(element.marker);
+        });
+        markers.length=0;
+    }
 
     let divAforModif = document.querySelectorAll(".modifstyle");
 
@@ -111,7 +143,7 @@ function onAddFilterClick(e, filter, event) {
 
     liRemove.remove();
 
-    addChipFilter(filter, event)
+    addChipFilter(filter, event);
 
 }
 
@@ -231,6 +263,8 @@ addFiltersDiv.appendChild(ulAddFilters);
 
 var markers = [];
 
+var divChipFilters = [];
+
 var clickedMarker;
 
 $.ajax({
@@ -259,7 +293,7 @@ $.ajax({
 
         });
 
-        divMap.removeChild(divLoading)
+        divLoading.className = "loading invisible";
 
     }
 
